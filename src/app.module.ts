@@ -18,7 +18,7 @@ import {ConfigModule} from "@nestjs/config";
         }),
         UsersModule,
         ConfigModule.forRoot({
-            envFilePath: '.env'
+            envFilePath: `.${process.env.NODE_ENV}.env`
         })
     ]
 })
